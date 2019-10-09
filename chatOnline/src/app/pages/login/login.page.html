@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>User Login:</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <img class="icon" src="assets/icon/user.svg" alt="" srcset="">
+  <ion-item>
+    <ion-label position="floating">E-mail: </ion-label>
+    <!-- Data building [(ngModel)]="variableAEnviarse" -->
+    <ion-input type="email" [(ngModel)]="mail" name="mail" autocomplete="on"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Password: </ion-label>
+    <ion-input type="password" [(ngModel)]="pass" name="pass"></ion-input>
+  </ion-item>
+  <br>
+  <ion-button (click)="onSubmitLogin()" expand="" color="dark">Entrar</ion-button>
+
+  <!-- <h1>mail: {{mail}}</h1>
+  <h1>pass: {{pass}}</h1> -->
+
+</ion-content>
