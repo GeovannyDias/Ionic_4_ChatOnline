@@ -3,6 +3,10 @@ Chat Online
 
 Aplicación de mensajeria
 
+**Conexión a Firebase:**
+```
+npm install firebase @angular/fire --save
+```
 # Guards
 
 ```
