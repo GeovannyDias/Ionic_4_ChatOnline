@@ -18,21 +18,35 @@ import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 //Agregar al arreglo import: []
 
+//Angularfirestore ** Ver datos en tiempo real
+import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { ModalChatComponent } from './components/modal-chat/modal-chat.component';
+import { FormsModule } from '@angular/forms';
+//import { AngularFirestoreModule, FirestoreSettingsToken } from "@angular/fire/firestore";
+
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [
+    AppComponent,
+    ModalChatComponent
+  ],
+  entryComponents: [
+    ModalChatComponent
+  ],
   imports: [
+    FormsModule,
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    //{ provide: FirestoreSettingsToken, useValue: {} }
   ],
   bootstrap: [AppComponent]
 })

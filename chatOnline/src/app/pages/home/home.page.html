@@ -1,14 +1,40 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>home</ion-title>
+  <ion-toolbar color="dark">
+    <ion-button slot="start" fill="clear" (click)="presentActionSheet()">
+      <ion-icon style="color:#fff; font-size: 25px" name="menu"></ion-icon>
+    </ion-button>
+    <ion-title>GeoChat</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-  <ion-button (click)="onLogout()">
+  <ion-list>
+    <ion-list-header>
+      Chats
+    </ion-list-header>
+
+    <ion-item button *ngFor="let chat of chatRoms" (click)="openChat(chat)">
+      <ion-avatar slot="start">
+        <img [src]="chat.img">
+      </ion-avatar>
+      <ion-label>
+        <h2><b>{{ chat.name}}</b></h2>
+        <!-- <h3>Chat grupal geo</h3> -->
+        <p>{{ chat.description }}</p>
+      </ion-label>
+    </ion-item>
+
+
+  </ion-list>
+
+
+
+
+
+  <!-- <ion-button (click)="onLogout()">
     <ion-icon slot="start" name="exit"></ion-icon>
     <ion-label>Logout</ion-label>
-  </ion-button>
+  </ion-button> -->
 
 </ion-content>
