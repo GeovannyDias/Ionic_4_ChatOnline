@@ -91,4 +91,10 @@ import { NologinGuard } from './guards/nologin.guard';
 
 ```
 
+**Ionic 4 en español: (ChatOnline)**
 * **https://www.youtube.com/watch?v=xgkwOBpU3ek&list=PL0az06iNsMl4OSbuxkstjR8e2lQDj1DVk**
+
+**Pipes en Ionic**
+
+* **https://www.nigmacode.com/ionic/Pipes-en-Ionic**
+

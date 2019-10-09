@@ -10,3 +10,14 @@ export interface MessageI {
     type: string;
     date: Date;
 }
+
+
+export interface DataI {
+    id?: string;
+    name: string;
+    lastname: string;
+    phone: string;
+    mail: string;
+    pass: string;
+    cpass: string;
+}

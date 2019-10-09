@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color="dark">
-    <ion-title>User Login:</ion-title>
+    <ion-title>Login:</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -17,7 +17,9 @@
     <ion-input type="password" [(ngModel)]="pass" name="pass"></ion-input>
   </ion-item>
   <br>
-  <ion-button (click)="onSubmitLogin()" expand="" color="dark">Entrar</ion-button>
+  <ion-button (click)="onSubmitLogin()" expand="block" color="dark">Entrar</ion-button>
+  <br>
+  <p text-center routerLink="/signup">Crear cuenta</p>
 
   <!-- <h1>mail: {{mail}}</h1>
   <h1>pass: {{pass}}</h1> -->

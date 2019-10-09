@@ -24,7 +24,7 @@ export class ModalChatComponent implements OnInit {
   ngOnInit() {
     this.chat = this.nav.get('chat');
     this.chatsService.getChatRoom(this.chat.id).subscribe(res => {
-      console.log(res);
+      //console.log(res);
       this.room = res;
     }); //Si nos retorna un observable podemos subscribirnos
   }

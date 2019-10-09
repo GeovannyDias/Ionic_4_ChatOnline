@@ -1,9 +1,50 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>signup</ion-title>
+  <ion-toolbar color="dark">
+    <ion-title>SignUp:</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
+  <img class="icon" src="assets/icon/sign-up.svg" alt="" srcset="">
+
+  <ion-item>
+    <ion-label position="floating">Nombre: </ion-label>
+    <!-- Data building [(ngModel)]="variableAEnviarse" -->
+    <ion-input type="text" [(ngModel)]="data.name" name="name" autocomplete="on"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Apellido: </ion-label>
+    <!-- Data building [(ngModel)]="variableAEnviarse" -->
+    <ion-input type="text" [(ngModel)]="data.lastname" name="lastname" autocomplete="on"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">N° Celular: </ion-label>
+    <!-- Data building [(ngModel)]="variableAEnviarse" -->
+    <ion-input maxlength="10" type="text" [(ngModel)]="data.phone" name="phone" autocomplete="on"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">E-mail: </ion-label>
+    <!-- Data building [(ngModel)]="variableAEnviarse" -->
+    <ion-input type="email" [(ngModel)]="data.mail" name="mail" autocomplete="on" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Contraseña: </ion-label>
+    <ion-input type="password" [(ngModel)]="data.pass" name="pass" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Confirmar Contraseña: </ion-label>
+    <ion-input type="password" [(ngModel)]="data.cpass" name="cpass" required></ion-input>
+  </ion-item>
+
+  <br>
+  <ion-button (click)="onSubmitSignup()" expand="block" color="dark">Registrarse</ion-button>
+  <br>
+  <p class="ion-text-center" routerLink="/login">Ya tengo cuenta</p>
+
 
 </ion-content>
